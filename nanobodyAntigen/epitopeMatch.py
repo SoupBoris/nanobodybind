@@ -36,6 +36,12 @@ class epitopeMatching():
        self.epitope = epitopeInput
        return
 
+    def score_match(pair, matrix):
+        if pair not in matrix:
+            return matrix[(tuple(reversed(pair)))]
+        else:
+            return matrix[pair]
+
     # --- String distance calculator ---
     # Calculate string distance to the input epitope
     # for all entries of epitopes withing the database
