@@ -45,6 +45,7 @@ class epitopeMatching():
     # --- String distance calculator ---
     # Calculate string distance to the input epitope
     # for all entries of epitopes withing the database
+    # Using blosum62 matrix algorithm
 
     # Note: good idea to optimize process by only calculating
     # string distance of non repeating epitopes
