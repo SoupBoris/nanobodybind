@@ -49,7 +49,7 @@ class epitopeMatching():
 
     # Note: good idea to optimize process by only calculating
     # string distance of non repeating epitopes
-    def stringDistanceCalc(string1, string2):
+    def stringDistanceCalc(self, string1, string2):
         string1 = string1.strip()
         string2 = string2.strip()
         n = len(string1)
@@ -75,13 +75,13 @@ class epitopeMatching():
                 else:
                     blosum = MatrixInfo.blosum62
                     pair = (si, sj)
-                    myscore = score_match(pair, blosum)
+                    myscore = self.score_match(pair, blosum)
 
                     pairi = (si, si)
-                    myscorei = score_match(pairi, blosum)
+                    myscorei = self.score_match(pairi, blosum)
 
                     pairj = (sj, sj)
-                    myscorej = score_match(pairj, blosum)
+                    myscorej = self.score_match(pairj, blosum)
 
                     testcost = (myscorei + myscorej) / 2 - myscore
                     cost = testcost / 2
