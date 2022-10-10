@@ -7,6 +7,7 @@
 
 from pandas import DataFrame
 from pandas import read_csv
+from Bio.SubsMat import MatrixInfo
 
 
 class epitopeMatching():
