@@ -36,7 +36,7 @@ class epitopeMatching():
        self.epitope = epitopeInput
        return
 
-    def score_match(pair, matrix):
+    def score_match(self, pair, matrix):
         if pair not in matrix:
             return matrix[(tuple(reversed(pair)))]
         else:
