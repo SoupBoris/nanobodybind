@@ -25,9 +25,9 @@ class epitopeMatching():
     # Creates epitope variable as well as
     # loading up database of matching
     # epitopes to nanobodies
-    def  __init__(epitopeInput):
-        epitope = epitopeInput
-        epitopeDatabase = read_csv('databases\realCDRS.csv')
+    def  __init__(self, epitopeInput):
+        self.epitope = epitopeInput
+        self.epitopeDatabase = read_csv('nanobodyAntigen/databases/realCDRS.csv',encoding='cp1252')
 
     # --- Set input funct ---
     # Utility function to set input manually
