@@ -48,7 +48,6 @@ class epitopeMatching():
     # similar to the input antigen as a NEW df
     def retreiveNanobodies(self, matchingEpitopes): 
         # ???
-        val = 5
         return
 
 
