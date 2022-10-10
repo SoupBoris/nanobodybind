@@ -104,7 +104,17 @@ class epitopeMatching():
     # Finds matching eptiopes, chooses top 3
     # and returns a list of all nanobodies associated
     # to these 3 eptiopes
-    def findEpitopeMatch():
+    def findEpitopeMatch(self):
+        self.epitopeDatabase['StringDistance'] = self.epitopeDatabase['Epitope'].apply(self.stringDistanceCalc, args = [self.epitope])
+        self.epitopeDatabase.sort_values(axis=0, by='StringDistance', ascending=True, inplace=True)
+        filteredEpitopes = self.epitopeDatabase.drop_duplicates(subset='Epitope', ignore_index=True)
+        filteredEpitopes = filteredEpitopes.iloc[0:5,20].values
+        # If you check the data on epitopes with least string-dist, 
+        #these are the smallest ones, perhaps we should reconsider using a certain range of string distance rather 
+        # #than a fixed amount of most similar entries
+
+        filteredNanobodies = self.epitopeDatabase[self.epitopeDatabase['Epitope'].isin(filteredEpitopes)]
+        print(filteredNanobodies)
         return
 
 a = epitopeMatching('ABC')
