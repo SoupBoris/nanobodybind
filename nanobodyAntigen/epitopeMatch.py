@@ -123,5 +123,7 @@ class epitopeMatching():
         print(filteredNanobodies)
         return
 
-a = epitopeMatching('ABC')
-print(a.epitopeDatabase)
+a = epitopeMatching('D,Y,G,NFNTQATNRNTDGSTDY,CNDGRTPGSR,VSDGNGM,CKGTD')
+
+a.findEpitopeMatch()
+#print(a.epitopeDatabase)
