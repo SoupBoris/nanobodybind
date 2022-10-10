@@ -66,7 +66,6 @@ class epitopeMatching():
             return m
         if (m == 0):
             return n
-
         dmatrix = [[0 for x in range(m)] for y in range(n)]
 
         for i in range(n):
