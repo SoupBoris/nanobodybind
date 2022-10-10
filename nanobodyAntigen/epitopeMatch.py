@@ -42,8 +42,48 @@ class epitopeMatching():
     # Note: good idea to optimize process by only calculating
     # string distance of non repeating epitopes
     def stringDistanceCalc(self):
-        # ???
-        return
+        
+    # use string Distance with blosum62
+    def string_Distance(string1, string2):
+        string1 = string1.strip()
+        string2 = string2.strip()
+        n = len(string1)
+        m = len(string2)
+        if (n == 0):
+            return m
+        if (m == 0):
+            return n
+
+        dmatrix = [[0 for x in range(m)] for y in range(n)]
+
+        for i in range(n):
+            dmatrix[i][0] = i
+        for j in range(m):
+         dmatrix[0][j] = j
+
+        for i in range(1, n):
+            si = string1[i - 1]
+            for j in range(1, m):
+                sj = string2[j - 1]
+                if (si.upper() == sj.upper()):
+                    cost = 0
+                else:
+                    blosum = MatrixInfo.blosum62
+                    pair = (si, sj)
+                    myscore = score_match(pair, blosum)
+
+                    pairi = (si, si)
+                    myscorei = score_match(pairi, blosum)
+
+                    pairj = (sj, sj)
+                    myscorej = score_match(pairj, blosum)
+
+                    testcost = (myscorei + myscorej) / 2 - myscore
+                    cost = testcost / 2
+
+                dmatrix[i][j] = min(min(dmatrix[i - 1][j] + 3, dmatrix[i][j - 1] + 3), dmatrix[i - 1][j - 1] + cost)
+        return dmatrix[n - 1][m - 1]
+            
 
     # --- Retreiver of nanobodies ---
     # Retreives nanobodies of interest based
