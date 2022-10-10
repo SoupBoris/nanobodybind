@@ -28,11 +28,13 @@ class epitopeMatching():
     def  __init__(self, epitopeInput):
         self.epitope = epitopeInput
         self.epitopeDatabase = read_csv('nanobodyAntigen/databases/realCDRS.csv',encoding='cp1252')
+        return
 
     # --- Set input funct ---
     # Utility function to set input manually
-    def setInputEpitope(epitopeInput):
-        epitope = epitopeInput
+    def setInputEpitope(self, epitopeInput):
+       self.epitope = epitopeInput
+       return
 
     
 
