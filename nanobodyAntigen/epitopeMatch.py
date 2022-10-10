@@ -110,8 +110,7 @@ class epitopeMatching():
         # #than a fixed amount of most similar entries
 
         filteredNanobodies = self.epitopeDatabase[self.epitopeDatabase['Epitope'].isin(filteredEpitopes)]
-        print(filteredNanobodies)
-        return
+        return filteredNanobodies
 
 a = epitopeMatching('D,Y,G,NFNTQATNRNTDGSTDY,CNDGRTPGSR,VSDGNGM,CKGTD')
 
