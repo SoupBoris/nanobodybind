@@ -95,7 +95,7 @@ class epitopeMatching():
 
                 dmatrix[i][j] = min(min(dmatrix[i - 1][j] + 3, dmatrix[i][j - 1] + 3), dmatrix[i - 1][j - 1] + cost)
         return dmatrix[n - 1][m - 1]
-            
+
 
     # --- Retreiver of nanobodies ---
     # Retreives nanobodies of interest based
