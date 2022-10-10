@@ -36,8 +36,11 @@ class epitopeMatching():
        return
 
     # --- String distance calculator ---
-    #
-    #
+    # Calculate string distance to the input epitope
+    # for all entries of epitopes withing the database
+
+    # Note: good idea to optimize process by only calculating
+    # string distance of non repeating epitopes
     def stringDistanceCalc(self):
         # ???
         return
@@ -50,6 +53,12 @@ class epitopeMatching():
         # ???
         return
 
+    # --- Find matching epitopes ---
+    # Finds matching eptiopes, chooses top 3
+    # and returns a list of all nanobodies associated
+    # to these 3 eptiopes
+    def findEpitopeMatch():
+        return
 
 a = epitopeMatching('ABC')
 print(a.epitopeDatabase)
