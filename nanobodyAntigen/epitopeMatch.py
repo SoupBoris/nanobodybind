@@ -51,7 +51,9 @@ class epitopeMatching():
     # string distance of non repeating epitopes
     def stringDistanceCalc(self, string1, string2):
         string1 = string1.strip()
+        string1 = string1.replace(',','')
         string2 = string2.strip()
+        string2 = string2.replace(',','')
         n = len(string1)
         m = len(string2)
         if (n == 0):
