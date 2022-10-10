@@ -28,6 +28,9 @@ class epitopeMatching():
     def  __init__(self, epitopeInput):
         self.epitope = epitopeInput
         self.epitopeDatabase = read_csv('nanobodyAntigen/databases/realCDRS.csv',encoding='cp1252')
+
+        self.epitopeDatabase.drop(self.epitopeDatabase[self.epitopeDatabase['Epitope'] == 'Epitop'].index, inplace = True)
+        self.epitopeDatabase.dropna(axis=0, inplace=True)
         return
 
     # --- Set input funct ---
