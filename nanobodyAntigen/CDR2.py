@@ -71,5 +71,3 @@ for it16 in range(2):
                                                        cdr2mutations7[it17] \
                                                        + cdr2dummy4[it18+(it17*1920)+(it16*3840)][13:]
             finalmat2.append(cdr2dummy4[it18+(it17*1920)+(it16*3840)])
-
-print(finalmat2)

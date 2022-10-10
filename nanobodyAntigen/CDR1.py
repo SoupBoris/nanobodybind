@@ -47,5 +47,3 @@ for d in range(2):
         for z in range(500):
             dummy3[z+(w*500)+(d*2500)] = dummy3[z+(w*500)+(d*2500)][0:7] + cdr1mutations3[w] + dummy3[z + (w * 500) + (d * 2500)][8:]
             finalmat.append(dummy3[z+(w*500)+(d*2500)])
-
-print(finalmat)

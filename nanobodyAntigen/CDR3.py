@@ -91,5 +91,3 @@ for j25 in range(2):
             cdr3dummy8[j27+(j26*312500)+(j25*1562500)] = cdr3dummy8[j27+(j26*312500)+(j25*1562500)][0:10] + cdr3muts2[j26] \
                                                              + cdr3dummy8[j27+(j26*312500)+(j25*1562500)][11:]
             finalmat3.append(cdr3dummy8[j27+(j26*312500)+(j25*1562500)])
-
-print(finalmat3)
