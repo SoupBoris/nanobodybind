@@ -5,7 +5,6 @@
 
 # return pandas df containing N rows of nanobody info
 
-import this
 from pandas import DataFrame
 from pandas import read_csv
 
@@ -36,5 +35,22 @@ class epitopeMatching():
        self.epitope = epitopeInput
        return
 
-    
+    # --- String distance calculator ---
+    #
+    #
+    def stringDistanceCalc(self):
+        # ???
+        return
 
+    # --- Retreiver of nanobodies ---
+    # Retreives nanobodies of interest based
+    # on their binding properties to the antigens
+    # similar to the input antigen as a NEW df
+    def retreiveNanobodies(self, matchingEpitopes): 
+        # ???
+        val = 5
+        return
+
+
+a = epitopeMatching('ABC')
+print(a.epitopeDatabase)
