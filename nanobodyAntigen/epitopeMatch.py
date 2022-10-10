@@ -49,10 +49,7 @@ class epitopeMatching():
 
     # Note: good idea to optimize process by only calculating
     # string distance of non repeating epitopes
-    def stringDistanceCalc(self):
-        
-    # use string Distance with blosum62
-    def string_Distance(string1, string2):
+    def stringDistanceCalc(string1, string2):
         string1 = string1.strip()
         string2 = string2.strip()
         n = len(string1)
