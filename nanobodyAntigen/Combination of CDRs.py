@@ -10,5 +10,3 @@ for ay in range(5000):
             CombinationsofCDRs.append(f'{finalmat[ay]}{finalmat2[aydios]}{finalmat3[aydiosmio]}')
             print(aydiosmio)
     print(ay)
-
-print(CombinationsofCDRs)
